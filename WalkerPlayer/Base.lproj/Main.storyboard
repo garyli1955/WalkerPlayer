@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14101" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,193 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myVC" id="BYZ-38-t0r" customClass="ViewController" customModule="WalkerPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXp-jt-gQX">
+                                <rect key="frame" x="161" y="536" width="66" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play" image="img_btn_play"/>
+                                <connections>
+                                    <action selector="playClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xR1-5y-f5W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jym-Sa-8Rn">
+                                <rect key="frame" x="25" y="538" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Prev" image="img_btn_previous"/>
+                                <connections>
+                                    <action selector="prevClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gdW-QM-5xC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qc2-1O-5CK">
+                                <rect key="frame" x="93" y="538" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Backward" image="img_btn_backward"/>
+                                <connections>
+                                    <action selector="backwardClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9DJ-C5-po3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofP-Ch-gCl">
+                                <rect key="frame" x="307" y="538" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next" image="img_btn_next"/>
+                                <connections>
+                                    <action selector="nextClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y5P-lK-tDe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiA-zs-vd2">
+                                <rect key="frame" x="239" y="538" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <state key="normal" title="Forward" image="img_btn_forward"/>
+                                <connections>
+                                    <action selector="forwardClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p9B-nz-keU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS7-S7-Nx4">
+                                <rect key="frame" x="93" y="460" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Shuffle" image="img_btn_shuffle"/>
+                                <connections>
+                                    <action selector="shuffleClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W4w-Nr-iUJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuF-YZ-ezx">
+                                <rect key="frame" x="239" y="460" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="img_btn_repeat"/>
+                                <connections>
+                                    <action selector="repeatClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d80-jb-0V2"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g9q-1E-YjE">
+                                <rect key="frame" x="0.0" y="27" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Walker Player" id="Tbv-uo-vgF">
+                                        <barButtonItem key="leftBarButtonItem" title="playlist" image="img_btn_playlist" id="jQ2-rA-RmV">
+                                            <connections>
+                                                <segue destination="MV3-Nb-CbH" kind="show" id="QIU-M3-moU"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="0xd-XB-cIw">
+                                <rect key="frame" x="25" y="622" width="334" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oD-jS-SME">
+                                <rect key="frame" x="307" y="622" width="52" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Song Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GD7-z2-TEh">
+                                <rect key="frame" x="25" y="405" width="342" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonBackward" destination="Qc2-1O-5CK" id="UJl-JR-nWA"/>
+                        <outlet property="buttonForward" destination="fiA-zs-vd2" id="KNm-ku-zoc"/>
+                        <outlet property="buttonNext" destination="ofP-Ch-gCl" id="AWi-Yl-cG0"/>
+                        <outlet property="buttonPlay" destination="UXp-jt-gQX" id="cVC-9k-aOR"/>
+                        <outlet property="buttonPrev" destination="jym-Sa-8Rn" id="lyb-Nm-Pv9"/>
+                        <outlet property="buttonRepeat" destination="SuF-YZ-ezx" id="cCj-Tc-1Qa"/>
+                        <outlet property="buttonShuffle" destination="eS7-S7-Nx4" id="FtN-dM-ikN"/>
+                        <outlet property="labelDuration" destination="8oD-jS-SME" id="dU9-dX-PfK"/>
+                        <outlet property="labelSongTitle" destination="GD7-z2-TEh" id="C2x-hb-24s"/>
+                        <outlet property="progressSong" destination="0xd-XB-cIw" id="z4S-7E-mXw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116" y="117.39130434782609"/>
+        </scene>
+        <!--Play List-->
+        <scene sceneID="agD-du-v26">
+            <objects>
+                <tableViewController storyboardIdentifier="playlistController" title="Play List" id="MV3-Nb-CbH" customClass="PlaylistTableViewController" customModule="WalkerPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="g6l-8W-NU5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="playlistCell" rowHeight="48" id="bwP-oA-fTL" customClass="PlaylistTableViewCell" customModule="WalkerPlayer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="48"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bwP-oA-fTL" id="BMP-qV-UdX">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="47.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WO3-kd-iJm">
+                                            <rect key="frame" x="32" y="12" width="208" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="HHf-oT-qmo"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZv-Ud-HFB">
+                                            <rect key="frame" x="275" y="12" width="64" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="6H4-6G-4kP"/>
+                                                <constraint firstAttribute="width" constant="64" id="czB-VV-Il4"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="WO3-kd-iJm" firstAttribute="top" secondItem="BMP-qV-UdX" secondAttribute="topMargin" constant="1" id="4xy-H3-QeD"/>
+                                        <constraint firstItem="TZv-Ud-HFB" firstAttribute="top" secondItem="BMP-qV-UdX" secondAttribute="topMargin" constant="1" id="5zZ-Ln-RS5"/>
+                                        <constraint firstItem="TZv-Ud-HFB" firstAttribute="leading" secondItem="WO3-kd-iJm" secondAttribute="trailing" constant="35" id="9JT-XC-Dpf"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="TZv-Ud-HFB" secondAttribute="trailing" constant="20" id="AHw-aD-kfg"/>
+                                        <constraint firstItem="TZv-Ud-HFB" firstAttribute="leading" secondItem="WO3-kd-iJm" secondAttribute="trailing" constant="35" id="TFe-QW-8TX"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="TZv-Ud-HFB" secondAttribute="bottom" constant="4" id="U1X-Bx-Cvi"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="WO3-kd-iJm" secondAttribute="bottom" constant="4" id="keM-ZV-2Z0"/>
+                                        <constraint firstItem="WO3-kd-iJm" firstAttribute="leading" secondItem="BMP-qV-UdX" secondAttribute="leadingMargin" constant="16" id="qBg-mK-2vF"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelDuration" destination="TZv-Ud-HFB" id="hGd-0h-7eV"/>
+                                    <outlet property="labelTitle" destination="WO3-kd-iJm" id="519-BX-Ylf"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="MV3-Nb-CbH" id="i5O-k0-IOu"/>
+                            <outlet property="delegate" destination="MV3-Nb-CbH" id="9y3-4B-KQc"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F9W-ff-isl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="824.79999999999995" y="119.1904047976012"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="img_btn_backward" width="72" height="72"/>
+        <image name="img_btn_forward" width="72" height="72"/>
+        <image name="img_btn_next" width="72" height="72"/>
+        <image name="img_btn_play" width="120" height="120"/>
+        <image name="img_btn_playlist" width="48" height="48"/>
+        <image name="img_btn_previous" width="72" height="72"/>
+        <image name="img_btn_repeat" width="72" height="72"/>
+        <image name="img_btn_shuffle" width="72" height="72"/>
+    </resources>
 </document>

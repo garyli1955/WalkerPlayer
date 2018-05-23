@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE46FB132046915000DA1A0E /* PlaylistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46FB122046915000DA1A0E /* PlaylistTableViewController.swift */; };
+		CE46FB15204693B800DA1A0E /* PlaylistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46FB14204693B800DA1A0E /* PlaylistTableViewCell.swift */; };
+		CE5C437E2048CE5A000E2520 /* SongQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C437D2048CE5A000E2520 /* SongQuery.swift */; };
 		CE6C7CAA2044F86B009AD3B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C7CA92044F86B009AD3B2 /* AppDelegate.swift */; };
 		CE6C7CAC2044F86B009AD3B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C7CAB2044F86B009AD3B2 /* ViewController.swift */; };
 		CE6C7CAF2044F86B009AD3B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE6C7CAD2044F86B009AD3B2 /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE46FB122046915000DA1A0E /* PlaylistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTableViewController.swift; sourceTree = "<group>"; };
+		CE46FB14204693B800DA1A0E /* PlaylistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTableViewCell.swift; sourceTree = "<group>"; };
+		CE5C437D2048CE5A000E2520 /* SongQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongQuery.swift; sourceTree = "<group>"; };
 		CE6C7CA62044F86B009AD3B2 /* WalkerPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkerPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6C7CA92044F86B009AD3B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE6C7CAB2044F86B009AD3B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,9 +63,12 @@
 				CE6C7CA92044F86B009AD3B2 /* AppDelegate.swift */,
 				CE6C7CAB2044F86B009AD3B2 /* ViewController.swift */,
 				CE6C7CAD2044F86B009AD3B2 /* Main.storyboard */,
+				CE5C437D2048CE5A000E2520 /* SongQuery.swift */,
 				CE6C7CB02044F86D009AD3B2 /* Assets.xcassets */,
 				CE6C7CB22044F86D009AD3B2 /* LaunchScreen.storyboard */,
 				CE6C7CB52044F86D009AD3B2 /* Info.plist */,
+				CE46FB122046915000DA1A0E /* PlaylistTableViewController.swift */,
+				CE46FB14204693B800DA1A0E /* PlaylistTableViewCell.swift */,
 			);
 			path = WalkerPlayer;
 			sourceTree = "<group>";
@@ -136,7 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6C7CAC2044F86B009AD3B2 /* ViewController.swift in Sources */,
+				CE46FB132046915000DA1A0E /* PlaylistTableViewController.swift in Sources */,
+				CE5C437E2048CE5A000E2520 /* SongQuery.swift in Sources */,
 				CE6C7CAA2044F86B009AD3B2 /* AppDelegate.swift in Sources */,
+				CE46FB15204693B800DA1A0E /* PlaylistTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +295,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HPQN6S6TR3;
 				INFOPLIST_FILE = WalkerPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,6 +314,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HPQN6S6TR3;
 				INFOPLIST_FILE = WalkerPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
